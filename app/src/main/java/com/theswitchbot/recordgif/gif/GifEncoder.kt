@@ -59,6 +59,9 @@ class GifEncoder {
 
         try {
             val file = File(mOutPath)
+            if(!File(file.parent.toString()).exists()){
+                File(file.parent.toString()).mkdir()
+            }
             if (!file.exists()) {
                 file.createNewFile()
             }else{
