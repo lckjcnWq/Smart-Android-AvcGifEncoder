@@ -1,6 +1,9 @@
 package com.theswitchbot.recordgif.gif
 
+import android.graphics.Bitmap
 import android.util.Log
+import com.blankj.utilcode.util.ImageUtils
+import com.theswitchbot.recordgif.IOwnApp
 import com.theswitchbot.recordgif.gif.maker.AnimatedGifEncoder
 import com.theswitchbot.recordgif.builder.TrackBuilder
 import java.io.ByteArrayOutputStream
@@ -49,9 +52,10 @@ class GifEncoder {
         localAnimatedGifEncoder.apply {
             start(bos)
             setRepeat(0)
-            setDelay(delay*1000)
+            setDelay(delay*60)
             for (i in bitmaps.indices) {
                 val addSuccess = addFrame(bitmaps[i])
+                ImageUtils.save(bitmaps[i],"${IOwnApp.instance.filesDir}/${System.currentTimeMillis()}.png",Bitmap.CompressFormat.PNG)
                 Log.d(TAG, "createGif addSuccess: ---->$addSuccess")
             }
             finish()
