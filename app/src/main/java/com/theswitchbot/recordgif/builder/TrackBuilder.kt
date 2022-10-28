@@ -30,6 +30,9 @@ class TrackBuilder {
         return this
     }
 
+    /**
+     * 获取轨迹图列表用于播放每一帧gif或者视频
+     * */
     fun getTrackList(trackPath: String, pointStep: Int = 3): List<Bitmap> {
         val lists = ArrayList<Point>()
 
