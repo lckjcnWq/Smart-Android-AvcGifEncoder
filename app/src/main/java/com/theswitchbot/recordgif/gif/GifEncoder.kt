@@ -55,7 +55,7 @@ class GifEncoder {
             setDelay(delay*60)
             for (i in bitmaps.indices) {
                 val addSuccess = addFrame(bitmaps[i])
-                ImageUtils.save(bitmaps[i],"${IOwnApp.instance.filesDir}/${System.currentTimeMillis()}.png",Bitmap.CompressFormat.PNG)
+//                ImageUtils.save(bitmaps[i],"${IOwnApp.instance.filesDir}/${System.currentTimeMillis()}.png",Bitmap.CompressFormat.PNG)
                 Log.d(TAG, "createGif addSuccess: ---->$addSuccess")
             }
             finish()

@@ -20,6 +20,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="图片合成视频" />
+        <Button
+            android:id="@+id/btnStart3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="存储数据" />
     </LinearLayout>
 
     <pl.droidsonroids.gif.GifImageView
